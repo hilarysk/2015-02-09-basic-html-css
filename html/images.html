@@ -1,4 +1,3 @@
-<!--This is a the HTML index page.-->
 
 <!DOCTYPE HTML>
 <html lang="en">
@@ -7,14 +6,13 @@
 <title>HTML and CSS | OCSWiki</title>
 <meta name="description" content="Wiki project about HTML and CSS to practice HTML and CSS. This is literally a 'meta' description. "/>
 
-        <link rel="CSS goes here" href=""/>
+   <link rel="stylesheet" href="../style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 </head>
 
 <header link="#000000" vlink="#000000" alink="#000000">
 
-  <div align="middle">
-  <img src="http://omahacodeschool.com/assets/ocs_title_bottom-0f5701005b41e72992e41e1e05b6deee.png" width="200px">
-  </div>
+ <img class="imglogo" src="http://omahacodeschool.com/assets/ocs_title_bottom-0f5701005b41e72992e41e1e05b6deee.png">
+ 
  
 <h1><a href="file://localhost/Users/hilarysk/Code/2015-02-09-basic-html-css/index.html">Home</a> | <em style="color: #778899">OCS Wiki</em></h1>
 
@@ -29,12 +27,45 @@
 
 
 
-<p></p>
+<p>I actually think inserting images is one of the easiest aspects of HTML, though creating captions was pretty tricky without using tables. There's a new tag in HTML5, <font style="color: #778899">&lt;figcaption&gt;</font>, that seems promising, though my experience with HTML5 is limited.</p>
+<p>To insert an image, use the filename path or a link:</p>
+<blockquote style="color: #778899">
+&lt;img src="http://photos-g.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10956561_425987300901454_191862438_n.jpg"&gt;
+</blockquote>
+<p>You can also add additional features, like alternative text (which appears when the user scrolls over the picture with their mouse):</p>
+<blockquote style="color: #778899">
+&lt;img src="http://photos-g.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10956561_425987300901454_191862438_n.jpg" alt="Description of photo"&gt;
+</blockquote>
+<p>Captions require wrapping the image in <font style="color: #778899">&lt;figcaption&gt;</font> tags:</p>
+<blockquote style="color: #778899">  
+&lt;figure&gt;
+&lt;img src="http://photos-g.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10956561_425987300901454_191862438_n.jpg" alt="Description of photo"&gt;
+&lt;figcaption&gt;Caption goes here&lt;/figcaption&gt;
+&lt;/figure&gt;
+</blockquote style="color: #778899">
+<p> As for formatting, this again is something that probably belongs in your CSS, but can also be done on an image-by-image basis.</p>
+<blockquote style="color: #778899">
+&lt;figure style="width: 300px; height: 300px; vertical-align: middle; float: right; padding-bottom: 5px; padding-top: 0px; padding-left: 10px; padding-right:10px"&gt;
+&lt;img src="http://photos-g.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10956561_425987300901454_191862438_n.jpg" alt="Description of photo" style="width: 300px; height: 300px; vertical-align: middle; float: right; padding-bottom: 5px; padding-top: 0px; padding-left: 10px; padding-right:10px""&gt;
+&lt;figcaption&gt;Caption goes here&lt;/figcaption&gt;
+&lt;/figure&gt;
+</blockquote>
 
 
+<p>As you can see, there's a lot of different options you could include in your <font style="color: #778899">&lt;style&gt;</font> section, but for the most part, this should go in CSS. Given the code above, we get this image:</p>
 
+<figure style="width: 304px; height: 228px; vertical-align: middle; float: right; padding-bottom: 5px; padding-top: 3px; padding-left: 10px; padding-right:20px">
+<img src="http://photos-g.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10956561_425987300901454_191862438_n.jpg" alt="Description of photo" style="width: 300px; height: 300px; vertical-align: middle; float: right; padding-bottom: 5px; padding-top: 0px; padding-left: 10px; padding-right:10px">
+<figcaption>Sign outside an auto shop in Omaha, Neb.<br></figcaption>
+</figure>
+
+<p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</em>
+<br><br><br>
 <hr>
-<p align="center"><em>NEXT: <a href="file://localhost/Users/hilarysk/Code/2015-02-09-basic-html-css/html/headers-and-paragraphs.html">Headers and paragraphs</a></em></p>
+<p align="center"><em>NEXT: <a href="file://localhost/Users/hilarysk/Code/2015-02-09-basic-html-css/html/lists.html">Lists</a></em></p>
 </div main text>
 <br>
 <hr>
