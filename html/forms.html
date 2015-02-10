@@ -1,0 +1,169 @@
+<!--This is a the HTML index page.-->
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+<title>HTML and CSS | OCSWiki</title>
+<meta name="description" content="Wiki project about HTML and CSS to practice HTML and CSS. This is literally a 'meta' description. "/>
+
+        <link rel="CSS goes here" href=""/>
+</head>
+<header link="#000000" vlink="#000000" alink="#000000">
+
+  <div align="middle">
+  <img src="http://omahacodeschool.com/assets/ocs_title_bottom-0f5701005b41e72992e41e1e05b6deee.png" width="200px">
+  </div>
+ 
+<h1><a href="file://localhost/Users/hilarysk/Code/2015-02-09-basic-html-css/index.html">Home</a> | <em style="color: #778899">OCS Wiki</em></h1>
+
+
+<hr></hr>
+
+<h3><a href="file://localhost/Users/hilarysk/Code/2015-02-09-basic-html-css/html/index.html">HTML</a> > Forms</h3>
+<img src="http://cdn2.hubspot.net/hub/251467/file-639770162-jpg/images/paperwork_pile.jpg" style="float:right;width:500px;padding-bottom:5px;padding-left:10px;padding-right:3px">
+</header>
+
+<body link="#000000" vlink="#000000" alink="#000000">
+<div main text>
+
+<form>
+First things first: What do you want to know about forms?
+<br>
+<br>  
+<select name="all-the-learns">
+<option value="how">How do they work?</option>
+<option value="formatting">How do you format them?</option>
+<option value="taxes">Will you do my taxes for me?</option>
+</select><br><br>
+
+<input type="submit" value="Submit">
+</form> 
+
+<p>Great! I'm happy to tackle all of those responses. I'll even do your taxes (though that's a terrible joke), but I can't guarantee I won't also redirect your tax return to my meager bank account. Your call. (I'm a middle-class, college-educated white woman in the United States, so I totally deserve it.)</p>
+<p><strong>How do they work?</strong></p>
+<p>In a nutshell, forms get input from the user and send it to either a website or a web server. They can collect selections from a pre-determined list, or let the user input anything they want, or let the user input data according to specific criteria. You see these everywhere - any time you create an account for a website, login to a site, or fill out a SurveyMonkey survey for you friend's cousin's grad school research on the sexual health of biracial double-amputee lesbians who drive 1994 Honda Civics and live in California cities that begin with "L".</p>
+<p><strong>How do you format them?</strong></p>
+<p>We'll take a look at how to code three formats: selecting an option from a drop-down menu, clicking a "radio button" (think round checkbox) or entering freeform data.</p>
+<p>First, freeform data:</p>
+
+<blockquote>
+<form>
+_________________<br><br>
+First name:<br>
+<input type="text" name="firstname" value="ie: Flora">
+<br>
+Last name:<br>
+<input type="text" name="lastname" value="ie: Zeng">
+<br><br>
+<input type="submit" value="Submit">
+<br>
+_________________
+</form> 
+</blockquote>
+
+<p>The code appears thusly:</p>
+
+
+<blockquote style="color: #778899">
+&lt;form action=""&gt;<br>
+&lt;input type="text" name="firstname" value="ie: Flora"&gt;<br>
+&lt;br&gt;<br>
+Last name:&lt;br&gt;<br>
+&lt;input type="text" name="lastname" value="ie: Zeng"&gt;<br>
+&lt;br&gt;&lt;br&gt;<br>
+&lt;br&gt;&lt;br&gt;<br>
+&lt;input type="submit" value="Submit"&gt;<br>
+&lt;/form&gt;<br>
+</blockquote>
+
+<p>Pretty simple. If this were a working form, pressing "Submit" would send the information to wherever the "action" attribute in line 1 points (in this case, nowhere).</p>
+<p>Here's another example:</p>
+
+<blockquote>
+<form>
+_____________<br><br>
+<input type="radio" name="sex" value="male" checked>Male
+<br>
+<input type="radio" name="sex" value="female">Female
+<br>
+<input type="radio" name="sex" value="intersex">Intersex
+<br>
+<input type="radio" name="sex" value="trans">Trans
+<br>
+<input type="radio" name="sex" value="genderqueer">Genderqueer
+<br><br>
+<input type="submit" value="Submit">
+<br>  
+_____________
+</form> 
+</blockquote>
+
+<p>And the code (though, really, asking someone's gender identity is rather personal):</p>
+
+<blockquote style="color: #778899">
+
+&lt;form action=""&gt;<br>
+&lt;input type="radio" name="sex" value="male" checked&gt;Male<br>
+&lt;br&gt;<br>
+&lt;input type="radio" name="sex" value="female"&gt;Female<br>
+&lt;br&gt;<br>
+&lt;input type="radio" name="sex" value="intersex"&gt;Intersex<br>
+&lt;br&gt;<br>
+&lt;input type="radio" name="sex" value="trans"&gt;Trans<br>
+&lt;br&gt;<br>
+&lt;input type="radio" name="sex" value="genderqueer"&gt;Genderqueer<br>
+&lt;br&gt;&lt;br&gt;<br>
+&lt;input type="submit" value="Submit"&gt;<br>
+&lt;/form&gt;<br>
+</blockquote>
+
+<p>Our last example is the drop-down menu from the top of the page:</p>
+
+<form>
+________________________________________________<br><br>
+First things first: What do you want to know about forms?
+<br>
+<br>  
+<select name="all-the-learns">
+<option value="how">How do they work?</option>
+<option value="formatting">How do you format them?</option>
+<option value="taxes">Will you do my taxes for me?</option>
+</select><br><br>
+
+<input type="submit" value="Submit">
+<br>
+________________________________________________
+</form> 
+
+<p>Behind the scenes:</p>
+
+<blockquote style="color: #778899">
+
+&lt;form action=""&gt;<br>
+&lt;select name="all-the-learns"&gt;<br>
+&lt;br&gt;<br>
+&lt;option value="how"&gt;How do they work?&lt;/option&gt;<br>
+&lt;br&gt;<br>
+&lt;option value="formatting"&gt;How do you format them?&lt;/option&gt;<br>
+&lt;br&gt;<br>
+&lt;option value="taxes"&gt;Will you do my taxes for me?&lt;/option&gt;<br>
+&lt;br&gt;<br>
+&lt;/select&gt;<br>
+&lt;br&gt;&lt;br&gt;<br>
+&lt;input type="submit" value="Submit"&gt;<br>
+&lt;/form&gt;<br>
+</blockquote>
+<hr>
+<p align="center"><em>NEXT: <a href="file://localhost/Users/hilarysk/Code/2015-02-09-basic-html-css/html/headers-and-paragraphs.html">Headers and paragraphs</a></em></p>
+</div main text>
+<hr>
+<footer align="right" style="margin-right:10px;"> 
+<h4>LINKS:</h4>
+<h5><em style="color: #778899"><a href="file://localhost/Users/hilarysk/Code/2015-02-09-basic-html-css/html/index.html">HTML</a></em> | <em style="color: #778899"><a href="file://localhost/Users/hilarysk/Code/2015-02-09-basic-html-css/css/index.html">CSS</a></em></h5>
+
+</footer>
+
+
+</body>
+</html>
